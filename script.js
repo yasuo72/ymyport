@@ -203,11 +203,11 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 document.getElementById("resumeDownload").addEventListener("click", function(event) {
     event.preventDefault();
 
-    const resumePath = "assets/Rohits_Resume.pdf";
+    const resumePath = "my_resume.pdf";
 
     const link = document.createElement("a");
     link.href = resumePath;
-    link.download = "Rohits_Resume.pdf";
+    link.download = "my_resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
