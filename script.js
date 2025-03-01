@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 📨 Contact Form System
     const contactForm = {
-        form: document.getElementById("contact-form"),
+        form: document.getElementById("contactForm"),
         init() {
             if (this.form) {
                 this.form.addEventListener("submit", e => this.handleSubmit(e));
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // 🌀 AOS Initialization
         initAOS() {
-            if (typeof AOS !== "undefined") {
+            if (typeof AOS !== "") {
                 AOS.init({ duration: 1000, once: true });
                 console.log("AOS Initialized!");
             }
