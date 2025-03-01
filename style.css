@@ -61,6 +61,54 @@ body {
 }
 
 /* 🌟 Navigation */
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    overflow: hidden; /* Prevent overflow of the header */
+}
+
+/* Navigation List */
+nav ul {
+    display: flex;
+    gap: 1.3rem;
+    list-style: none;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of items */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Scrollbar Styles */
+nav ul::-webkit-scrollbar {
+    height: 8px; /* Height of the scrollbar */
+}
+
+nav ul::-webkit-scrollbar-thumb {
+    background: var(--accent-color); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners */
+}
+
+nav ul::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Background of the scrollbar track */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Keep items in a row */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        padding: 0.5rem 0; /* Add some padding */
+    }
+
+    nav ul li {
+        flex-shrink: 0; /* Prevent items from shrinking */
+    }
+}
 /* Header Styles */
 header {
     position: fixed;
